@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青岛一日游 | 构成主义风格攻略</title>
+    <!-- 移除Google Fonts引用，只保留下面两行 -->
+    <link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-100-M/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/tailwindcss/2.2.19/tailwind.min.css">
+    <style>
+        :root {
+            --red: #e63946;
+            --black: #111111;
+            --gray: #d1d1d1;
+            --white: #f1f1f1;
+        }
+        
+        /* 使用系统字体栈替代Google Fonts */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+            background-color: var(--white);
+            color: var(--black);
+            padding: 0;
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        .constructivist-container {
+            max-width: 100%;
+            margin: 0 auto;
+            overflow-x: hidden;
+        }
+        
+        .diagonal-header {
+            position: relative;
+            background-color: var(--black);
+            color: var(--white);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transform: skew(0deg, -2deg) translateY(-1rem);
+            margin-top: 2rem;
+        }
+        
+        .header-content {
+            transform: skew(0deg, 2deg);
+        }
+        
+        .title {
+            /* 使用系统衬线字体替代Noto Serif SC */
+            font-family: "Songti SC", "SimSun", "STSong", serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            line-height: 1.2;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+            transform: rotate(-3deg);
+            display: inline-block;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            transform: translateX(2rem);
+        }
+        
+        .overview-section {
+            position: relative;
+            background-color: var(--white);
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-left: 8px solid var(--red);
+        }
+        
+        .section-title {
+            /* 使用系统衬线字体替代Noto Serif SC */
+            font-family: "Songti SC", "SimSun", "STSong", serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--red);
+            margin-bottom: 1rem;
+            position: relative;
+            transform: translateX(1rem);
+        }
+        
+        .section-title::before {
+            content: "";
+            position: absolute;
+            left: -1.5rem;
+            top: 50%;
+            width: 1rem;
+            height: 2px;
+            background-color: var(--red);
+        }
+        
+        .red-box {
+            background-color: var(--red);
+            color: var(--white);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+        }
+        
+        .timeline {
+            position: relative;
+            margin: 1rem 0 2rem 1rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: var(--black);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0.5rem;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background-color: var(--red);
+            transform: translateX(-50%) rotate(45deg);
+        }
+        
+        .timeline-time {
+            font-weight: 700;
+            color: var(--red);
+            margin-bottom: 0.25rem;
+        }
+        
+        .timeline-content {
+            background-color: var(--white);
+            padding: 1rem;
+            border-left: 3px solid var(--red);
+        }
+        
+        .diagonal-block {
+            position: relative;
+            background-color: var(--black);
+            color: var(--white);
+            padding: 2rem 1.5rem;
+            margin: 3rem 0;
+            clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+        }
+        
+        .tips-section {
+            background-color: var(--white);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            border-right: 8px solid var(--red);
+        }
+        
+        .tip-item {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .tip-item::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--red);
+            font-weight: 700;
+        }
+        
+        .geometric-accent {
+            position: absolute;
+            width: 3rem;
+            height: 3rem;
+            background-color: var(--red);
+            z-index: -1;
+        }
+        
+        .accent-1 {
+            top: -1rem;
+            right: -1rem;
+            transform: rotate(45deg);
+        }
+        
+        .accent-2 {
+            bottom: -1rem;
+            left: -1rem;
+            transform: rotate(15deg);
+        }
+        
+        .budget-block {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            position: relative;
+            transform: rotate(-1deg);
+        }
+        
+        .budget-content {
+            transform: rotate(1deg);
+        }
+        
+        .budget-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            border-bottom: 1px dashed var(--gray);
+            padding-bottom: 0.5rem;
+        }
+        
+        .budget-total {
+            font-weight: 700;
+            color: var(--red);
+            margin-top: 1rem;
+            padding-top: 0.5rem;
+            border-top: 2px solid var(--red);
+        }
+        
+        .diagonal-info {
+            position: relative;
+            background-color: var(--white);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border: 2px solid var(--black);
+            transform: skew(-5deg);
+        }
+        
+        .info-content {
+            transform: skew(5deg);
+        }
+        
+        .contact-block {
+            background-color: var(--red);
+            color: var(--white);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+        }
+        
+        footer {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 2rem 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+        
+        /* 为可点击导航地点添加样式 */
+        .location-nav {
+            display: inline-flex;
+            align-items: center;
+            color: var(--red);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border-bottom: 1px dashed var(--red);
+            margin-top: 2px;
+        }
+        
+        .location-nav:hover {
+            color: #b91c1c;
+            transform: translateY(-1px);
+        }
+        
+        .location-nav i {
+            margin-right: 4px;
+            font-size: 14px;
+        }
+        
+        /* 导航提示消息 */
+        .nav-toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .nav-toast i {
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="constructivist-container">
+        <!-- 标题区 -->
+        <div class="diagonal-header">
+            <div class="header-content">
+                <h1 class="title">青岛一日游</h1>
+                <p class="subtitle">2023年夏季 | 海滨文化之旅</p>
+                <div class="flex justify-between items-center mt-4">
+                    <div>
+                        <p><i class="fas fa-calendar-alt"></i> 2023年7月15日（周六）</p>
+                        <p><i class="fas fa-user"></i> 海滨探索团</p>
+                    </div>
+                    <div class="text-right">
+                        <p><i class="fas fa-sun"></i> 晴到多云</p>
+                        <p><i class="fas fa-temperature-high"></i> 24°C/18°C</p>
+                        <p><i class="fas fa-wind"></i> 东南风3-4级</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 行程概览 -->
+        <div class="overview-section mx-3">
+            <div class="geometric-accent accent-1"></div>
+            <h2 class="section-title"><i class="fas fa-map-marked-alt"></i> 行程概览</h2>
+            <div class="red-box">
+                <p>本次青岛一日游将带您领略这座海滨城市的魅力，从栈桥和五四广场开始，游览八大关的欧式建筑，品尝地道海鲜，参观青岛啤酒博物馆，最后在崂山欣赏自然风光。适合历史文化爱好者、美食爱好者和自然风光摄影爱好者。</p>
+            </div>
+            <div class="geometric-accent accent-2"></div>
+        </div>
+        
+        <!-- 详细时间表 -->
+        <div class="mx-3">
+            <h2 class="section-title"><i class="fas fa-clock"></i> 行程安排</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">08:30-10:00</div>
+                    <div class="timeline-content">
+                        <h3 class="font-bold"><i class="fas fa-monument"></i> 栈桥景区</h3>
+                        <p>地点：<span class="location-nav" data-location="青岛栈桥" data-address="青岛市南区太平路12号"><i class="fas fa-map-marker-alt"></i>青岛市南区太平路12号</span></p>
+                        <p>门票：免费</p>
+                        <p>推荐：拍照留念，欣赏海景</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-time">10:30-11:30</div>
+                    <div class="timeline-content">
+                        <h3 class="font-bold"><i class="fas fa-square"></i> 五四广场</h3>
+                        <p>地点：<span class="location-nav" data-location="青岛五四广场" data-address="市南区东海西路"><i class="fas fa-map-marker-alt"></i>市南区东海西路</span></p>
+                        <p>门票：免费</p>
+                        <p>推荐：观赏"五月的风"雕塑</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-time">12:00-13:30</div>
+                    <div class="timeline-content">
+                        <h3 class="font-bold"><i class="fas fa-utensils"></i> 午餐时间</h3>
+                        <p>地点：<span class="location-nav" data-location="青岛劈柴院" data-address="青岛市市南区中山路67号"><i class="fas fa-map-marker-alt"></i>劈柴院美食街</span></p>
+                        <p>推荐：海鲜、鲅鱼水饺</p>
+                        <p>预算：约100元/人</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-time">14:00-15:30</div>
+                    <div class="timeline-content">
+                        <h3 class="font-bold"><i class="fas fa-archway"></i> 八大关风景区</h3>
+                        <p>地点：<span class="location-nav" data-location="青岛八大关" data-address="市南区武胜关支路10号"><i class="fas fa-map-marker-alt"></i>市南区武胜关支路10号</span></p>
+                        <p>门票：免费</p>
+                        <p>推荐：欧式建筑群、历史名人故居</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-time">16:00-17:30</div>
+                    <div class="timeline-content">
+                        <h3 class="font-bold"><i class="fas fa-beer"></i> 青岛啤酒博物馆</h3>
+                        <p>地点：<span class="location-nav" data-location="青岛啤酒博物馆" data-address="市南区登州路56-1号"><i class="fas fa-map-marker-alt"></i>市南区登州路56-1号</span></p>
+                        <p>门票：60元/人</p>
+                        <p>推荐：参观啤酒生产线，品尝原浆啤酒</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-time">18:00-19:30</div>
+                    <div class="timeline-content">
+                        <h3 class="font-bold"><i class="fas fa-utensils"></i> 晚餐时间</h3>
+                        <p>地点：<span class="location-nav" data-location="青岛台东商圈" data-address="青岛市市北区台东三路"><i class="fas fa-map-marker-alt"></i>台东商圈或啤酒街</span></p>
+                        <p>推荐：海鲜、烧烤</p>
+                        <p>预算：约120元/人</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-time">20:00-21:30</div>
+                    <div class="timeline-content">
+                        <h3 class="font-bold"><i class="fas fa-mountain"></i> 崂山夜景（可选）</h3>
+                        <p>地点：<span class="location-nav" data-location="崂山风景区" data-address="青岛市崂山区崂山景区"><i class="fas fa-map-marker-alt"></i>崂山风景区</span></p>
+                        <p>门票：崂山景区门票</p>
+                        <p>推荐：观海看夜景</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 交通信息 -->
+        <div class="diagonal-block">
+            <h2 class="section-title text-white"><i class="fas fa-bus"></i> 交通信息</h2>
+            <ul class="list-none pl-0">
+                <li class="mb-3">
+                    <strong>栈桥 → 五四广场</strong>：乘坐观光巴士1线或步行约20分钟（沿海边），距离约1.5公里
+                </li>
+                <li class="mb-3">
+                    <strong>五四广场 → 劈柴院</strong>：乘坐地铁2号线（五四广场站 → 中山公园站），步行5分钟，约15分钟
+                </li>
+                <li class="mb-3">
+                    <strong>劈柴院 → 八大关</strong>：乘坐26路公交车，约20分钟
+                </li>
+                <li class="mb-3">
+                    <strong>八大关 → 啤酒博物馆</strong>：乘坐26路公交车，约25分钟
+                </li>
+                <li class="mb-3">
+                    <strong>啤酒博物馆 → 台东/啤酒街</strong>：乘坐1路或302路公交车，约15分钟
+                </li>
+                <li class="mb-3">
+                    <strong>市区 → 崂山景区</strong>：乘坐104路公交车（约1小时）或打车（约40分钟，100元左右）
+                </li>
+            </ul>
+        </div>
+        
+        <!-- 实用提示 -->
+        <div class="tips-section mx-3">
+            <h2 class="section-title"><i class="fas fa-info-circle"></i> 实用提示</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                    <ul class="list-none pl-0">
+                        <li class="tip-item">建议提前下载"青岛地铁"和"青岛公交"APP</li>
+                        <li class="tip-item">夏季海边日照强，请带好防晒用品</li>
+                        <li class="tip-item">游览崂山请穿舒适的鞋子</li>
+                        <li class="tip-item">啤酒博物馆需预约，可在官网或微信公众号预约</li>
+                        <li class="tip-item">八大关游览建议徒步，可深入感受建筑风情</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-red-600 mb-2">美食推荐</h3>
+                    <ul class="list-none pl-0">
+                        <li class="tip-item">海鲜：蛤蜊、鲍鱼、海胆</li>
+                        <li class="tip-item">鲅鱼水饺：劈柴院老店</li>
+                        <li class="tip-item">啤酒：青岛原浆啤酒</li>
+                        <li class="tip-item">崂山白花蛇草水</li>
+                        <li class="tip-item">辣炒蛤蜊：台东夜市</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 预算 -->
+        <div class="budget-block mx-3">
+            <div class="budget-content">
+                <h2 class="section-title text-white"><i class="fas fa-coins"></i> 预算一览</h2>
+                <div class="budget-item">
+                    <span>景点门票</span>
+                    <span>60元/人</span>
+                </div>
+                <div class="budget-item">
+                    <span>餐饮费用</span>
+                    <span>220元/人</span>
+                </div>
+                <div class="budget-item">
+                    <span>交通费用</span>
+                    <span>50元/人</span>
+                </div>
+                <div class="budget-item">
+                    <span>其他开销</span>
+                    <span>100元/人</span>
+                </div>
+                <div class="budget-total flex justify-between">
+                    <span>总计</span>
+                    <span>约430元/人</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 紧急联系 -->
+        <div class="diagonal-info mx-3">
+            <div class="info-content">
+                <h2 class="section-title"><i class="fas fa-phone-alt"></i> 重要电话</h2>
+                <div class="grid grid-cols-2 gap-2">
+                    <div>
+                        <p><i class="fas fa-phone"></i> 旅游咨询：0532-12301</p>
+                        <p><i class="fas fa-phone"></i> 紧急求助：110（警察）</p>
+                    </div>
+                    <div>
+                        <p><i class="fas fa-phone"></i> 急救电话：120</p>
+                        <p><i class="fas fa-phone"></i> 青岛啤酒博物馆：0532-83889666</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 行李清单 -->
+        <div class="contact-block mx-3">
+            <h2 class="section-title text-white"><i class="fas fa-suitcase"></i> 行李清单</h2>
+            <div class="grid grid-cols-2 gap-2">
+                <div>
+                    <p>□ 身份证/证件</p>
+                    <p>□ 现金/银行卡</p>
+                    <p>□ 手机/充电器</p>
+                    <p>□ 防晒霜/遮阳帽</p>
+                </div>
+                <div>
+                    <p>□ 舒适鞋子</p>
+                    <p>□ 相机/手机</p>
+                    <p>□ 薄外套（傍晚海边凉）</p>
+                    <p>□ 水杯/小零食</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 页脚 -->
+        <footer>
+            <p>本旅行指南由"构成主义风格"设计工作室出品</p>
+            <p>© 2023 | 关注我们获取更多创意旅行攻略</p>
+        </footer>
+    </div>
+    
+    <!-- 导航提示 -->
+    <div class="nav-toast" id="navToast">
+        <i class="fas fa-map-marked-alt"></i>
+        <span>正在打开导航...</span>
+    </div>
+    
+    <script>
+        // 检测设备类型
+        function isIOS() {
+            return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        }
+        
+        function isAndroid() {
+            return /Android/.test(navigator.userAgent);
+        }
+        
+        // 打开高德地图导航
+        function openAmapNavigation(location, address) {
+            let url = '';
+            
+            // 显示导航提示
+            showNavToast();
+            
+            if (isIOS()) {
+                // iOS平台使用URL Scheme
+                url = `iosamap://poi?sourceApplication=qingdao-trip&name=${encodeURIComponent(location)}&address=${encodeURIComponent(address)}&dev=0`;
+            } else if (isAndroid()) {
+                // 安卓平台使用URL Scheme
+                url = `androidamap://poi?sourceApplication=qingdao-trip&name=${encodeURIComponent(location)}&addr=${encodeURIComponent(address)}&dev=0`;
+            } else {
+                // 其他平台使用网页版高德地图
+                url = `https://uri.amap.com/marker?position=&name=${encodeURIComponent(location)}&src=qingdao-trip&coordinate=gaode&callnative=1`;
+            }
+            
+            // 尝试打开高德地图应用
+            window.location.href = url;
+            
+            // 如果3秒后用户仍然在当前页面，说明可能没有安装高德地图，提示用户
+            setTimeout(function() {
+                if (document.visibilityState !== 'hidden') {
+                    // 打开高德地图网页版
+                    window.location.href = `https://uri.amap.com/marker?position=&name=${encodeURIComponent(location)}&src=qingdao-trip&coordinate=gaode`;
+                }
+            }, 3000);
+        }
+        
+        // 显示导航提示
+        function showNavToast() {
+            const toast = document.getElementById('navToast');
+            toast.style.display = 'flex';
+            
+            setTimeout(function() {
+                toast.style.display = 'none';
+            }, 2000);
+        }
+        
+        // 为所有地点添加点击事件
+        document.addEventListener('DOMContentLoaded', function() {
+            const locationElements = document.querySelectorAll('.location-nav');
+            
+            locationElements.forEach(function(element) {
+                element.addEventListener('click', function() {
+                    const location = this.dataset.location;
+                    const address = this.dataset.address;
+                    openAmapNavigation(location, address);
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
